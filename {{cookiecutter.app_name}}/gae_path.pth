@@ -1,0 +1,18 @@
+# gae_path.pth
+# Fix path for Google App Engine modules
+#
+# Place in the virtualenv lib, not in the GAE lib.
+# Only necessary if using a virtualenv that is using a different
+# lib folder by default (e.g. where pip is putting stuff if you 
+# don't specify a target dir with `-t`). In which case, copy
+# this file to the default lib directory, and change the line below 
+# to link to the Google App Engine lib directory. Verify that you
+# have it set correctly by entering the python IDE while the virtualenv
+# is activated, and try to import a package that you only have installed
+# to the GAE lib and not to the virtualenv site-packages.
+#
+# In other words, if using virtualenv, with it activated, run
+# python -c "import pip; print(pip.util.site_packages)"
+# and move this file to that directory, then change the line below
+# to link back to this lib/
+../../../{{cookiecutter.app_name}}/lib/

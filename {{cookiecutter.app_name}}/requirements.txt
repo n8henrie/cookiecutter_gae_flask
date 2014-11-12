@@ -1,0 +1,16 @@
+# Include requirements for {{cookiecutter.app_name}} here.
+#
+# Generate with `pip freeze`
+# Run 'pip install -r requirements.txt -t lib/' to install these dependencies
+# in `lib/` subdirectory.
+#
+# Note: The `lib` directory is added to `sys.path` by `appengine_config.py`.
+# If working in a virtualenv, add lib to your virtualenv path by adding gae_path.pth
+# to /lib/python2.7/site-packages/
+
+Flask-Bootstrap==3.2.0.2
+Flask==0.10.1
+Flask-WTF==0.10.2
+Jinja2==2.7.3
+WTForms==2.0.1
+pytest==2.6.3
