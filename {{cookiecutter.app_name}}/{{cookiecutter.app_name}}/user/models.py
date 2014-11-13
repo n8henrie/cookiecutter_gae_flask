@@ -2,8 +2,6 @@
 import datetime as dt
 
 from flask.ext.login import UserMixin
-
-from {{cookiecutter.app_name}}.extensions import bcrypt
 from {{cookiecutter.app_name}}.database import (
     Column,
     db,
@@ -46,11 +44,11 @@ class User(UserMixin, SurrogatePK, Model):
         else:
             self.password = None
 
-    def set_password(self, password):
-        self.password = bcrypt.generate_password_hash(password)
-
-    def check_password(self, value):
-        return bcrypt.check_password_hash(self.password, value)
+#     def set_password(self, password):
+#         self.password = bcrypt.generate_password_hash(password)
+#
+#     def check_password(self, value):
+#         return bcrypt.check_password_hash(self.password, value)
 
     @property
     def full_name(self):
