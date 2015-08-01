@@ -7,7 +7,7 @@ python:
 
 env:
     global:
-        - GAE_VERSION=1.9.20
+        - GAE_VERSION=1.9.24
         - PYTHONPATH=$PYTHONPATH:$PWD/vendor/google_appengine
     
 before_script:
@@ -15,9 +15,10 @@ before_script:
     - unzip -q -d vendor vendor/google_appengine_${GAE_VERSION}.zip
 
 install:
-    - ln -s $PWD/gae_lib.pth $(python -c 'import sys; import os; print(os.path.join(sys.prefix, "lib", "python" + sys.version[:3], "site-packages"))')
-    - pip install -t lib -r requirements_gae.txt
-    - pip install -r requirements_local.txt
+    # May not need this now that GAE out of venv 20150801
+    # - ln -s $PWD/gae_lib.pth $(python -c 'import sys; import os; print(os.path.join(sys.prefix, "lib", "python" + sys.version[:3], "site-packages"))')
+    - pip install -t lib -r requirements.txt
+    - pip install -r dev-requirements.txt
     - pip install tox
 
 # command to run tests, e.g. python setup.py test
