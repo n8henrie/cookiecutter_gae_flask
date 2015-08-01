@@ -15,11 +15,13 @@ special characters. I recommend you stick with numbers, letters, and `-`.
 
 Once you've made your new package,
 I encourage you to make a new venv with a GAE-appropriate Python in the
-directory, e.g.
+directory, then test the basic setup:
 
     $ cd new_flask_app
     $ virtualenv -p $(command -v python2.7) venv
     $ source venv/bin/activate
+    $ pip install -r requirements.txt -t lib
+    $ dev_appserver.py .
 
 # Features
 --------
