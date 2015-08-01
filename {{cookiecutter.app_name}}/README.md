@@ -1,1 +1,13 @@
-This directory constains the open source licenses of any other code / modules used. The filename describes which open source project the license comes from.
+{{ cookiecutter.project_name }}
+================================
+
+{{ cookiecutter.project_short_description }}
+
+-   Free software: GPLv3
+-   Documentation: https://{{ cookiecutter.repo_name }}.readthedocs.org.
+
+Features
+--------
+
+-   TODO
+

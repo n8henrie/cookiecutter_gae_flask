@@ -1,30 +1,36 @@
-cookiecutter_gae_flask
-==================
+# cookiecutter_gae_flask
 
 A Flask / Google App Engine template for [cookiecutter](https://github.com/audreyr/cookiecutter).
 
-Use it now
-----------
+## Use it now
 
     $ pip install cookiecutter
-    $ cookiecutter https://github.com/n8henrie/cookiecutter_gae_flask
+    $ cookiecutter https://github.com/n8henrie/cookiecutter_gae_flask.git
 
-You will be asked about your basic info (name, project name, app name,
-etc.). This info will be used in your new project.
+You will be asked about your basic info (name, project name, app name, etc.).
+This info will be used in your new project.
 
-Features
+**NB:** GAE will choke if your app name (as defined in `app.yaml`) has certain
+special characters. I recommend you stick with numbers, letters, and `-`.
+
+Once you've made your new package,
+I encourage you to make a new venv with a GAE-appropriate Python in the
+directory, e.g.
+
+    $ cd new_flask_app
+    $ virtualenv -p $(command -v python2.7) venv
+    $ source venv/bin/activate
+
+# Features
 --------
 
-Screenshots
+# Screenshots
 -----------
 
-Inspiration
------------
-
-License
+# License
 -------
 
-GNU GPL V3
+MIT
 
 Changelog
 ---------

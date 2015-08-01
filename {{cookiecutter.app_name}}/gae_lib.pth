@@ -12,7 +12,7 @@
 # to the GAE lib and not to the virtualenv site-packages.
 #
 # In other words, if using virtualenv, with it activated, run
-# python -c "import pip; print(pip.util.site_packages)"
+# python -c "import pip; print(pip.utils.site_packages)"
 # and move this file to that directory, then change the line below
 # to link back to this lib/
 ../../../{{cookiecutter.app_name}}/lib/
